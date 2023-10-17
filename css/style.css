@@ -1,0 +1,28 @@
+:root {
+  --clr-desaturated-red: hsl(0, 36%, 70%);
+  --clr-soft-red: hsl(0, 93%, 68%);
+  --clr-dark-grayish-red: hsl(0, 6%, 24%);
+  --gradient-main: 135deg, from hsl(0, 80%, 86%), to hsl(0, 74%, 74%);
+  --gradient-active: 135deg, from hsl(0, 0%, 100%), to hsl(0, 100%, 98%);
+}
+
+html {
+  box-sizing: border-box;
+  line-height: 1.2;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  color: inherit;
+}
+
+body {
+  font: normal 400 1rem "Josefin Sans", sans-serif;
+  color: var(--clr-desaturated-red);
+}/*# sourceMappingURL=style.css.map */

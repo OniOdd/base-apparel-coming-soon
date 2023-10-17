@@ -1,0 +1,22 @@
+@use '../util' as u;
+
+html {
+  box-sizing: border-box;
+  line-height: 1.2;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  color: inherit;
+}
+
+body {
+  font: normal 400 u.rem(16) u.$font;
+  color: var(--clr-desaturated-red);
+}
