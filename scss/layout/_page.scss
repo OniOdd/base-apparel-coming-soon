@@ -1,0 +1,100 @@
+@use '../util' as u;
+
+.wrapper {
+  display: grid;
+  grid-template-areas: 'header' 'aside' 'main';
+  grid-template-columns: auto;
+  grid-template-rows: repeat(3, auto);
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.header {
+  grid-area: header;
+  margin: 32px;
+
+  &__logo {
+    display: block;
+    width: 100px;
+  }
+}
+
+.main {
+  grid-area: main;
+}
+
+.section {
+  text-align: center;
+  margin: 0 32px;
+
+  %focus-border { border: 1px solid var(--clr-dark-grayish-red); }
+
+  &__title {
+    margin-bottom: 22px;
+    font-size: u.rem(40.34);
+    font-weight: 600;
+    letter-spacing: .2em;
+    text-transform: uppercase;
+    color: var(--clr-dark-grayish-red);
+  }
+
+  &__word-thin {
+    font-weight: 300;
+    color: var(--clr-desaturated-red);
+  }
+
+  &__text {
+    margin: 0 8px 38px;
+    line-height: 1.4;
+  }
+
+  &__form { position: relative; }
+
+  &__input {
+    width: 311px;
+    height: 48px;
+    padding: 0 24px;
+    border: 1px solid rgba(206, 151, 151, .5);
+    border-radius: 30px;
+    background-color: transparent;
+
+    &::placeholder {
+      color: inherit;
+      opacity: .5;
+    }
+
+    &:focus { @extend %focus-border; }
+  }
+
+  &__button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    width: 64px;
+    height: 48px;
+    border-radius: 30px;
+    background-image: var(--gradient-main);
+    cursor: pointer;
+
+    &:focus { @extend %focus-border; }
+
+    &:focus,
+    &:hover { background-image: var(--gradient-active); }
+  }
+}
+
+.sidebar {
+  grid-area: aside;
+  height: 250px;
+  margin-bottom: 66px;
+
+  &__image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+  }
+}

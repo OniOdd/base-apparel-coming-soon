@@ -2,6 +2,7 @@
   --clr-desaturated-red: hsl(0, 36%, 70%);
   --clr-soft-red: hsl(0, 93%, 68%);
   --clr-dark-grayish-red: hsl(0, 6%, 24%);
-  --gradient-main: 135deg, from hsl(0, 80%, 86%), to hsl(0, 74%, 74%);
-  --gradient-active: 135deg, from hsl(0, 0%, 100%), to hsl(0, 100%, 98%);
+  --gradient-main: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+  --gradient-active: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 90%));
+  --bg-gradient: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
 }

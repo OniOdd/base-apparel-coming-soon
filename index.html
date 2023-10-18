@@ -14,35 +14,36 @@
 </head>
 
 <body>
-  <header>
-    <img src="./images/logo.svg" alt="Base Apparel logo">
+<div class="wrapper">
+  <header class="header">
+    <img class="header__logo" src="./images/logo.svg" alt="Base Apparel logo">
   </header>
-  <main>
-    <section aria-labelledby="title">
-      <h1 id="title">
-        <span>We're</span> 
-        <span>coming</span> 
-        <span>soon</span>
+  <main class="main">
+    <section class="section" aria-labelledby="title">
+      <h1 class="section__title" id="title">
+        <span class="section__word-thin">
+          We're</span> coming soon
       </h1>
-      <p>
-        Hello fellow shoppers! We're currently building our new fashion store. 
+      <p class="section__text">
+        Hello fellow shoppers! We're currently building our new fashion store.
         Add your email below to stay up-to-date with announcements and our launch deals.
       </p>
-      <form>
-        <input id="email" name="email" type="email" placeholder="Email Address"
+      <form class="section__form">
+        <input class="section__input" id="email" name="email" type="email" placeholder="Email Address"
                 aria-label="Field for entering an email address">
-        <button type="button"
+        <button class="section__button" type="button"
                 aria-label="Button responsible for sending an email address">
         </button>
       </form>
     </section>
   </main>
-  <aside>
+  <aside class="sidebar">
     <picture>
       <source srcset="./images/hero-mobile.webp" type="image/webp">
-      <img src="./images/hero-mobile.jpg" alt="The picture shows a girl">
+      <img class="sidebar__image" src="./images/hero-mobile.jpg" alt="The picture shows a girl">
     </picture>
   </aside>
+</div>
 <script src="./js/script.js"></script>
 </body>
 

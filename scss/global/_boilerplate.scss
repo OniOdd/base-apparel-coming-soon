@@ -12,11 +12,14 @@ html {
   margin: 0;
   padding: 0;
   border: 0;
+  outline: 0;
   font: inherit;
   color: inherit;
 }
 
 body {
-  font: normal 400 u.rem(16) u.$font;
+  min-height: 100vh;
+  font: normal 400 u.rem(13.9) u.$font;
   color: var(--clr-desaturated-red);
+  background: var(--bg-gradient) center / cover no-repeat;
 }
