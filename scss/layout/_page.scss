@@ -8,15 +8,40 @@
   max-width: 1440px;
   margin-left: auto;
   margin-right: auto;
+
+  @include u.breakpoint(large) {
+    grid-template-areas: 'header aside' 'main aside';
+    grid-template-columns: 445px minmax(auto, 610px);
+    grid-template-rows: auto minmax(auto, 100%);
+    column-gap: 60px;
+    padding-left: 85px;
+  }
+
+  @include u.breakpoint(x-large) {
+    column-gap: 120px;
+    padding-left: 165px;
+  }
+
+  @include u.breakpoint(xx-large) {
+    column-gap: 220px;
+  }
 }
 
 .header {
   grid-area: header;
   margin: 32px;
 
+  @include u.breakpoint(large) {
+    margin: 66px 0 138px 0;
+  }
+
   &__logo {
     display: block;
     width: 100px;
+
+    @include u.breakpoint(medium) {
+      width: 158px;
+    }
   }
 }
 
@@ -26,8 +51,17 @@
 
 .section {
   width: 311px;
-  margin: 0 auto;
+  margin: 0 auto 92px;
   text-align: center;
+
+  @include u.breakpoint(medium) {
+    width: 445px;
+  }
+
+  @include u.breakpoint(large) {
+    margin: 0;
+    text-align: left;
+  }
 
   %focus-border { border: 1px solid var(--clr-dark-grayish-red); }
 
@@ -38,6 +72,14 @@
     letter-spacing: .2em;
     text-transform: uppercase;
     color: var(--clr-dark-grayish-red);
+
+    @include u.breakpoint(medium) {
+      font-size: u.rem(68);
+    }
+
+    @include u.breakpoint(large) {
+      margin-bottom: 34px;
+    }
   }
 
   &__word-thin {
@@ -48,6 +90,10 @@
   &__text {
     margin: 0 8px 38px;
     line-height: 1.7;
+
+    @include u.breakpoint(large) {
+      margin: 0 0 40px;
+    }
   }
 
   &__form {
@@ -63,6 +109,10 @@
     border: 1px solid var(--input-border-clr);
     border-radius: 30px;
     background-color: transparent;
+
+    @include u.breakpoint(medium) {
+      height: 56px;
+    }
 
     &::placeholder {
       color: var(--clr-desaturated-red);
@@ -84,6 +134,11 @@
     box-shadow: 0 10px 21px -1px rgba(206, 151, 151, .6);
     cursor: pointer;
 
+    @include u.breakpoint(medium) {
+      width: 100px;
+      height: 56px;
+    }
+
     &:focus { @extend %focus-border; }
 
     &:focus,
@@ -104,6 +159,11 @@
   grid-area: aside;
   height: 250px;
   margin-bottom: 66px;
+
+  @include u.breakpoint(large) {
+    height: auto;
+    margin-bottom: 0;
+  }
 
   &__image {
     display: block;
