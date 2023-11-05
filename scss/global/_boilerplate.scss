@@ -26,4 +26,9 @@ body {
   @include u.breakpoint(medium) {
     font: normal 400 u.rem(16) u.$font;
   }
+
+  @include u.breakpoint(large) {
+    background: url('../images/bg-pattern-desktop.svg') left center / cover no-repeat,
+                var(--bg-gradient) center / cover no-repeat;
+  }
 }

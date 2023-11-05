@@ -36,6 +36,11 @@ body {
     font: normal 400 1rem "Josefin Sans", sans-serif;
   }
 }
+@media (min-width: 992px) {
+  body {
+    background: url("../images/bg-pattern-desktop.svg") left center/cover no-repeat, var(--bg-gradient) center/cover no-repeat;
+  }
+}
 
 .wrapper {
   display: grid;
@@ -50,9 +55,11 @@ body {
   .wrapper {
     grid-template-areas: "header aside" "main aside";
     grid-template-columns: 445px minmax(auto, 610px);
-    grid-template-rows: auto minmax(auto, 100%);
+    grid-template-rows: auto 1fr;
     -moz-column-gap: 60px;
          column-gap: 60px;
+    justify-content: end;
+    height: 100vh;
     padding-left: 85px;
   }
 }
@@ -60,7 +67,6 @@ body {
   .wrapper {
     -moz-column-gap: 120px;
          column-gap: 120px;
-    padding-left: 165px;
   }
 }
 @media (min-width: 1400px) {
