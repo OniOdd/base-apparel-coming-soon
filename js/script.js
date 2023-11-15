@@ -1,20 +1,21 @@
 'use strict';
 
-const form = document.querySelector('#form');
-const input = form.querySelector('#email');
-const button = form.querySelector('#button');
+const input = document.querySelector('#email');
+const button = document.querySelector('#button');
 
-const message = form.querySelector('#message');
-const iconError = form.querySelector('#icon-error');
+const message = document.querySelector('#message');
+const iconError = document.querySelector('#icon-error');
 
-form.addEventListener('submit', event => event.preventDefault());
 input.addEventListener('keydown', event => {
   if (event.keyCode === 13) {
     event.preventDefault();
     checkEmail();
   }
 });
-button.addEventListener('click', () => checkEmail());
+button.addEventListener('click', event => {
+  event.preventDefault();
+  checkEmail();
+});
 
 function checkEmail() {
   const EMAIL_PATTERN = /^([a-z_.-]+)@([a-z\d-]+)\.([a-z]{2,8})(\.[a-z]{2,8})?$/;
