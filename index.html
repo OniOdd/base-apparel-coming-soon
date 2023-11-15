@@ -21,27 +21,28 @@
   <main class="main">
     <section class="section" aria-labelledby="title">
       <h1 class="section__title" id="title">
-        <span class="section__word-thin">
-          We're</span> coming soon
+        <span class="section__word-thin">We're</span> coming soon
       </h1>
       <p class="section__text">
         Hello fellow shoppers! We're currently building our new fashion store.
         Add your email below to stay up-to-date with announcements and our launch deals.
       </p>
-      <form class="section__form">
+      <form class="section__form" id="form">
         <input class="section__input" id="email" name="email" type="email" placeholder="Email Address"
                 aria-label="Field for entering an email address">
-        <button class="section__button" type="button"
+        <button class="section__button" id="button" type="button"
                 aria-label="Button responsible for sending an email address">
-          <div class="section__icon-arrow"></div>
+          <span class="section__icon-arrow"></span>
         </button>
+        <p class="section__message" id="message">Please provide a valid email</p>
+        <div class="section__icon-error" id="icon-error"></div>
       </form>
     </section>
   </main>
   <aside class="sidebar">
     <picture>
       <source srcset="./images/hero-desktop.webp" type="image/webp" media="(min-width: 992px)">
-      <source srcset="./images/hero-desktop.jpg" type="image/webp" media="(min-width: 992px)">
+      <source srcset="./images/hero-desktop.jpg" type="image/jpeg" media="(min-width: 992px)">
       <source srcset="./images/hero-mobile.webp" type="image/webp">
       <img class="sidebar__image" src="./images/hero-mobile.jpg" alt="The picture shows a girl">
     </picture>
